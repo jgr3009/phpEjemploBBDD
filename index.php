@@ -31,8 +31,8 @@
                $id_equipo = $fila['id_equipo'];
                $nombre_equipo = $fila['nombre'];
                $ciudad_equipo = $fila['ciudad'];
-               echo '<tr>';
-               echo '<td><button class="btn btn-danger btn-xs"> <i class="glyphicon glyphicon-trash" ></i></button></td>';
+               echo '<tr id="boton_'.$i.'">';
+               echo '<td><button  onClick="borra('.$i.','.$id_equipo.');" class="btn btn-danger btn-xs"> <i class="glyphicon glyphicon-trash" ></i></button></td>';
                echo '<td>'.$id_equipo . '</td>';
                echo '<td>'.$nombre_equipo. '</td>';
                echo '<td>'.$ciudad_equipo. '</td>';
@@ -41,13 +41,19 @@
             echo '</table>'
             
         ?>
+                    <div id="carga"></div>
                     </div>
                 <div class="col-xs-3"></div>
                 </div>
         </div>
         <script src="js/jquery-1.12.0.min.js"></script>
         <script>
-            
+            function borra(numero, _idEquipo){
+                $('#boton_'+numero).hide("slow");
+                $('#carga').load('borraFila.php', {
+                    idEquipo: _idEquipo
+                });
+            }
         </script>
         
     </body>
