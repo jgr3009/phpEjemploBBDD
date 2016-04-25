@@ -1,4 +1,5 @@
 <?php
+
     include('./funciones.php');
     $mysqli = conectaBBDD();
 
@@ -10,7 +11,16 @@
     $num_filas = $consulta -> num_rows;
     
     if ($num_filas > 0){
-        require 'menuUsuario.php';
+        session_start();
+        $_SESSION['usuario'] = $nombreUsuario;
+        $resultado = $consulta ->fetch_array();
+        $tipo = $resultado['tipo'];
+        echo $tipo;
+        switch ($tipo) {
+            case 0 : require 'menuUsuario.php'; break;
+            case 1 : require 'menuAdmin.php'; break;
+        }
+        
     }
     else {
         echo '<h1> anda y que te peinen  </h1>';
