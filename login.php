@@ -1,6 +1,12 @@
 <?php
 
     include('./funciones.php');
+    
+    require 'menuAdmin.php';
+    
+    
+    /*
+    
     $mysqli = conectaBBDD();
 
     $nombreUsuario = $_POST['nombreUsuario'];
@@ -26,3 +32,5 @@
         echo '<h1> anda y que te peinen  </h1>';
     }
     ?>
+
+*/

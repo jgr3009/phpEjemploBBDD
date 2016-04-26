@@ -3,9 +3,9 @@ session_start();
 $nombre_user = $_SESSION['usuario'];
 
 //si el usuario no ha iniciado sesión, lo mandamos al index.php
-if( !isset( $_SESSION['usuario'] )){
-    header('Location: index.php');
-    }
+//if( !isset( $_SESSION['usuario'] )){
+//    header('Location: index.php');
+//    }
 
  //si sí que ha iniciado la sesión, se carga la barra de navegación  
 
@@ -23,15 +23,14 @@ if( !isset( $_SESSION['usuario'] )){
           <a class="navbar-brand" href="#"><?php echo $nombre_user; ?></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+
+           <ul class="nav navbar-nav">
+                <li>
+                    <p class="navbar-btn">
+                        <a href="#" class="btn btn-primary">I'm a link button!</a>
+                    </p>
+                </li>
+            </ul>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
