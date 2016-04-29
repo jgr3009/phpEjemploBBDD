@@ -45,7 +45,6 @@
     var _pass = $('#pass').val();
     var _email = $('#email').val();
     var _DNI = $('#DNI').val();
-    
 
         $('#cargaResultado').load('adminInsertaUsuario.php',{
             nombreUsuario: _nombreUsuario,
