@@ -27,7 +27,7 @@ $nombre_user = $_SESSION['usuario'];
            <ul class="nav navbar-nav">
                 <li>
                     <p class="navbar-btn">
-                        <a href="#" class="btn btn-primary">I'm a link button!</a>
+                        <a id="nuevoUsuario" href="#" class="btn btn-primary">Nuevo Usuario</a>
                     </p>
                 </li>
             </ul>
@@ -35,6 +35,16 @@ $nombre_user = $_SESSION['usuario'];
       </div>
     </nav>
 
+<div class="container" id="menuCentralAdmin">
+
+</div>
 
 
+<script>
+            
+            $('#nuevoUsuario').click(function(){
+                $('#menuCentralAdmin').load('adminNuevoUsuario.php');
+            });
+
+</script>
 
