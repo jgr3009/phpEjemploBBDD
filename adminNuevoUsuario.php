@@ -1,14 +1,20 @@
 <br>
 <div class="row">
+    <style>
+        my-error-class {
+border: 1px solid #E40D0D;
+}   
+
+    </style>
     <div class="col-xs-3"></div>
     <div class="col-xs-6">
         <br>
         <form  id="nuevoUsuario" >
-            <input type="text" class="form-control" id="nombreUsuario" placeholder="Nombre Usuario">
+            <input type="text" class="form-control" id="nombreUsuario" placeholder="Nombre Usuario" required>
             <br>
             <input type="password" class="form-control" id="pass" placeholder="Contraseña" required>
             <br>
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
             <br>
             <input type="text" class="form-control" id="DNI" placeholder="DNI">
             <br>  
@@ -39,6 +45,7 @@
     
     $('#nuevoUsuario').validate({
         //submitHandler:
+          errorClass: "my-error-class"
     });
     
     var _tipo=0;

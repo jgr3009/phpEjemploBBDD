@@ -18,7 +18,7 @@
         
                     <h2>La página de pruebas </h2>
                     <br><br>
-                    <input id="nombreUsuario" class="form-control" type="text" placeholder="Nombre de Usuario">
+                    <input id="nombreUsuario" class="form-control" type="text" placeholder="Nombre de Usuario o Email">
                     <br><br>
                     <input id="pass" class="form-control" type="password" placeholder="Introduce tu contraseña">
                     <br><br>

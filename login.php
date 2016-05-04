@@ -2,17 +2,18 @@
 
     include('./funciones.php');
     
-    require 'menuAdmin.php';
+    //require 'menuAdmin.php';
     
     
-    /*
+    
     
     $mysqli = conectaBBDD();
 
     $nombreUsuario = $_POST['nombreUsuario'];
     $pass = $_POST['pass'];
+    $email = $_POST['nombreUsuario'];
             
-    $consulta = $mysqli -> query("SELECT * FROM usuario where codigo = '$nombreUsuario' and pass= '$pass';");
+    $consulta = $mysqli -> query("SELECT * FROM usuario where (nombreUsuario = '$nombreUsuario' or  email= '$email') and pass= '$pass';");
 
     $num_filas = $consulta -> num_rows;
     
@@ -33,4 +34,3 @@
     }
     ?>
 
-*/
